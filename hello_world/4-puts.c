@@ -1,9 +1,9 @@
 #include <stdio.h>
  /**
-  * main - Using puts to print a line in "C"
-  * Return: 0
+  * main  -void puts(int);
+  * Return: 0 (Success)
   */
-int main(void)
+int main.c(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
