@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* main - Prints the alpha bet with prototype
+* print_alphabet - Prints the alpha bet with prototype
+* print_alphabet
 * Return: 0
 */
 
