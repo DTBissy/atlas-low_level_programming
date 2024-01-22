@@ -2,14 +2,14 @@
 #include <stdio.h>
 /**
 * add - function that sums two numbers
-* @a parameter 2
-* @b parameter 2
-* return: 0
+* @a: parameter 1
+* @b: parameter 2
+* Return: a - b
 */
 
 int add(int a, int b)
 {
-	return(a + b);
+	return (a + b);
 }
 
 
