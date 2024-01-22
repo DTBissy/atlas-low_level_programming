@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
-* int print_last_digit(int) - Prints the last digit of a number
+* print_last_digit - Prints the last digit of a number
 * @g: Function parameter
-* Return: 'k'
+* Return: k
 * To get the last digit of a number you have to "remainder it"
 */
 
