@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
-* _isupper
-* @c - function parameter
+* _isupper - Checks for uppercase
+* @c: function parameter
 * Return: 0
 */
 
