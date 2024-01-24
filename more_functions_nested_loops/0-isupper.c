@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
-*
-*
-*
+* _isupper
+*@c - function parameter
+*Return: 0
 */
 
 int _isupper(int c)
