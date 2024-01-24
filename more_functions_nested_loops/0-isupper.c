@@ -3,8 +3,8 @@
 
 /**
 * _isupper
-*@c - function parameter
-*Return: 0
+* @c - function parameter
+* Return: 0
 */
 
 int _isupper(int c)
