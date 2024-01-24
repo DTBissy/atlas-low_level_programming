@@ -2,8 +2,8 @@
 #include "main.h"
 /**
 * mul - Multiplies to integers
-* @a - function parameter
-* @b - function parameter
+* @a: function parameter
+* @b: function parameter
 * Return: 0
 */
 
