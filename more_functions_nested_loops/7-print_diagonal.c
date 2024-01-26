@@ -3,6 +3,7 @@
 
 /**
 * print_diagonal - Prints diagonal lines on new lines
+* @n: funvtion parameter
 * Return: 0
 */
 
