@@ -6,6 +6,10 @@
 */
 void print_line(void)
 {
+	int n;
+
+	n = 0;
+
 	if (n <= 0)
 		putchar('\n');
 	else
@@ -14,6 +18,6 @@ void print_line(void)
 
 		for (i = 1; i <= n; n++)
 			putchar('_');
-		putchar('\n')
+		putchar('\n');
 	}
 }
