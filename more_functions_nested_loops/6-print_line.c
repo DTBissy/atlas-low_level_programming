@@ -1,23 +1,21 @@
 #include <stdio.h>
+#include "main.h"
 /**
 *print_line - Prints multiple lines or a new line
-*
+*@n: function parameter
 *Return: void
 */
-void print_line(void)
+void print_line(int n)
 {
-	int n;
-
-	n = 0;
-
 	if (n <= 0)
-		putchar('\n');
+	putchar('\n');
 	else
 	{
 		int i;
 
-		for (i = 1; i <= n; n++)
+		for (i = 1; i <= n; i++)
 			putchar('_');
 		putchar('\n');
 	}
 }
+
