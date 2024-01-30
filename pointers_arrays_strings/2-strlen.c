@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include "main.h"
-
+#include <string.h>
 /**
 * strlen - Returns string number
 * @s: Function Parameter
 * Return: 0
 */
 
-int strlen(char *s)
+int _strlen(char *s)
 {
 	int i;
 	int count = 0;
