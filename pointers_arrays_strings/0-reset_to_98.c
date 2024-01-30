@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
  /**
- *reset_to_98 - Restes pointer to 98
- *@*n: function parameter
+ * reset_to_98 - Restes pointer to 98
+ * @*n: function parameter
  * Return: 0
  */
 
