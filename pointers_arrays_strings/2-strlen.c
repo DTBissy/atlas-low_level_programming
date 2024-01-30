@@ -2,7 +2,7 @@
 #include "main.h"
 #include <string.h>
 /**
-* strlen - Returns string number
+* _strlen - Returns string number
 * @s: Function Parameter
 * Return: 0
 */
