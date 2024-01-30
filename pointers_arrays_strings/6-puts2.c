@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-#include <strimg.h>
+#include <string.h>
 
 /**
 * puts2 - Prints every other character of string
