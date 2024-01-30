@@ -8,7 +8,7 @@
 * Return: 0
 */
 
-void putca2(char *str)
+void puts2(char *str)
 {
 	int i;
 
