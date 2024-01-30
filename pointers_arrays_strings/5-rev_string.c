@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
-* rev_string - Reverses the string 
+* rev_string - Reverses the string
 * @s: function parameter
 * Return: 0
 */
@@ -21,7 +21,7 @@ void rev_string(char *s)
 		char j;
 
 		j = s[i];
-	s[i] = s[count - 1 -i];
+	s[i] = s[count - 1 - i];
 	s[count - 1 - i] = j;
 	}
 }
