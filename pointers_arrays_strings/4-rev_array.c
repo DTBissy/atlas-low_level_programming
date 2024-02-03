@@ -2,26 +2,21 @@
 #include "main.h"
 
 /**
- *
- *
- *
- *
- *
+ * reverse_array - Reverses the array
+ *@a: Function Parameter
+ *@n: Function Parameter
+ *Return:0
  */
 
 void reverse_array(int *a, int n)
 {
 	int i;
-	int count = 0;
+	int temp;
 
-	for (i = 0; a[i] < n && a[i] != '\0'; i++)
-		count++;
-	for (i = 0; i < count / 2; i++)
+	for (i = 0; i < (n / 2); i++)
 	{
-		int ;
-
-		b = a[i];
-		a[i] = a[count - 1 - i];
-		a[count - 1 - i] = b;
+		temp = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = temp;
 	}
 }
