@@ -11,3 +11,14 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
+	int a;
+
+	for (a = 0; s[a]; a++)
+	{
+		if (!strchr(accept, s[a]))
+		{
+			break;
+		}
+	}
+	return (a);
+}
