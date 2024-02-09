@@ -3,12 +3,12 @@
 #include <math.h>
 
 /**
- * pow_recursion - Raises y to the power of x
- * @x:
- * @y:
+ * _pow_recursion - Raises y to the power of x
+ * @x: Pounter Parameter
+ * @y: Pointer Paramter
  * Return: 0
  */
- int _pow_recursion(int x, int y)
+int _pow_recursion(int x, int y)
 {
 	if (y < 0)
 	{
@@ -18,8 +18,8 @@
 	{
 		return (1);
 	}
-	else 
+	else
 	{
-		return x * _pow_recursion(x, y - 1);
+		return (x * _pow_recursion(x, y - 1));
 	}
 }
