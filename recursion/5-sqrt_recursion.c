@@ -3,7 +3,7 @@
 #include <string.h>
 /**
  * power_operation - returns the natural square root of a number
- * @n: input number.
+ * @a: input number.
  * @c: iterator.
  * Return: square root or -1.
  */
@@ -22,7 +22,7 @@ int power_operation(int a, int c)
 
 /**
  * _sqrt_recursion - returns the natural square root of a number.
- * @n: input number.
+ * @a: input number.
  * Return: natural square root
  */
 
