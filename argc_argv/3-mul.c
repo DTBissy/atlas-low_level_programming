@@ -9,7 +9,7 @@
  */
 
 
-int main(unsigned int argc, unsigned char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc <= 2)
 	{
