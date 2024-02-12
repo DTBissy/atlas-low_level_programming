@@ -1,6 +1,12 @@
 #include <stdio.h>
+/**
+ * main - Prints the ARGV[] of the function
+ * @argc: Arg
+ * @argv: arg
+ * Return: 0
+ */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
