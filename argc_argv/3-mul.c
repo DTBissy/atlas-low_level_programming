@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		printf("%s\n", "Error");
 		return (1);
 	}
-	printf("Sum %d and %d is %d\n", num1, num2, product);
+	printf("%d\n", product);
 
 	return (0);
 }
