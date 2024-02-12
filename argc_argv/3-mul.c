@@ -11,10 +11,10 @@
 
 int main(unsigned int argc, unsigned char *argv[])
 {
-	if (argc <   2)
+	if (argc <= 2)
 	{
-		printf("Error\n");
-		return   1;
+		printf("%s\n", "Error");
+		return (1);
 	}
 	else
 	{
