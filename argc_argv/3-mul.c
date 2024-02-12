@@ -16,9 +16,13 @@ int main(int argc, char *argv[])
 		printf("%s\n", "Error");
 		return (1);
 	}
-	int num1 = (atoi(argv[1]));
-	int num2 = (atoi(argv[2]));
-	int product = num1 * num2;
+	int num1;
+	int num2;
+	int product;
+
+	num1 = (atoi(argv[1]));
+	num2 = (atoi(argv[2]));
+	product = num1 * num2;
 
 	printf("Sum %d and %d is %d\n", num1, num2, product);
 
