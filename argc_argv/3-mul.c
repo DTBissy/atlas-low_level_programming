@@ -19,7 +19,7 @@ int main(unsigned int argc, unsigned char *argv[])
         num2 = (atoi(argv[argc - 2]));
         product = num1 * num2;
 
-	if (argc < 3)
+	if (argc <= 2)
 	{
 		printf("%s\n", "Error");
 		return (1);
