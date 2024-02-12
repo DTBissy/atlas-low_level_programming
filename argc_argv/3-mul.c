@@ -11,20 +11,14 @@
 
 int main(unsigned int argc, unsigned char *argv[])
 {
-	int num1;
-        int num2;
-        int product;
-
-        num1 = (atoi(argv[argc - 1]));
-        num2 = (atoi(argv[argc - 2]));
-        product = num1 * num2;
-
-	if (argc <= 2)
+	if (argc <   2)
 	{
-		printf("%s\n", "Error");
-		return (1);
+		printf("Error\n");
+		return   1;
 	}
-	printf("%d\n", product);
-
-	return (0);
+	else
+	{
+		printf("%d\n", (atoi(argv[argc -   1]) * atoi(argv[argc -   2])));
+		return (0);
+	}
 }
