@@ -5,7 +5,7 @@
 
 /**
  * free_grid - Frees my previous function
- * @grid: My grid
+ * @array: My grid
  * @height: My My
  * Return: 0
  */
@@ -13,6 +13,7 @@
 void free_grid(int **array, int height)
 {
 	int i;
+
 	for (i = 0; i < height; i++)
 	{
 		free(array[i]);
