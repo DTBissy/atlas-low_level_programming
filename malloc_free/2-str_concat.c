@@ -20,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (result == NULL)
 	{
-		return (NULL);
+		return ('\0');
 	}
 
 	memcpy(result, s1, len1);
