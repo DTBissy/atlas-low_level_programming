@@ -13,21 +13,22 @@ char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
 	char *s;
-
-	if(size == '\0')
+/** "size" is the array im counting */
+	if (size == '\0')
 	{
 		return (NULL);
 	}
-	s = (char *)malloc(size * sizeof(char));
+/** Creating the memory space to the size of "size" */
+	s = malloc(sizeof(char) * size);
+
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-
 	for (i = 0; i < size; i++)
 	{
 		s[i] = c;
 	}
-	free(s);
-	return (0);
+/** Return what you use to initalize malloc *s in this case not 0*/
+	return (s);
 }
