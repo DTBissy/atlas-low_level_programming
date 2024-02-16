@@ -18,6 +18,15 @@ char *str_concat(char *s1, char *s2)
 
 	char *result = (char *)malloc(length * sizeof(char));
 
+	if (len1 == '\0')
+	{
+		return (NULL);
+	}
+	if (len2 == '\0')
+	{
+		return (NULL);
+	}
+
 	if (result == NULL)
 	{
 		return ('\0');
