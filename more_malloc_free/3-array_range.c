@@ -18,10 +18,6 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-	if (min < 0 || max > 10)
-	{
-		return (NULL);
-	}
 	s = malloc(sizeof(int) * size);
 	if (!s)
 	{
