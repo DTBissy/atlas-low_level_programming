@@ -11,7 +11,8 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	size_t bigsize = nmemb * size;
-	void *s;
+	char *s;
+	unsigned int i;
 
 	if (nmemb == '\0')
 	{
@@ -25,6 +26,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (s == NULL)
 	{
 		return (NULL);
+	}
+	for (i = 0; i < bigsize; i++)
+	{
+		s[i] = 0;
 	}
 
 	return (s);
