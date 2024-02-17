@@ -7,7 +7,7 @@
  * @max: maximum
  * Return: 0
  */
- int *array_range(int min,int max)
+int *array_range(int min, int max)
 {
 	int g = min;
 	int i = 0;
@@ -16,14 +16,14 @@
 
 	if (min > max)
 	{
-		return (NULL);
+		return (0);
 	}
 	s = malloc(sizeof(int) * size);
 	if (!s)
 	{
 		return (0);
 	}
-	while (i < max - min)
+	while (i <= max - min)
 	{
 		s[i++] = g++;
 }
