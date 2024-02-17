@@ -10,7 +10,7 @@
  *
  * Return: Nothing.
  */
-void simple_print_buffer(unsigned int *buffer, unsigned int size)
+void simple_print_buffer(int *buffer, unsigned int size)
 {
     unsigned int i;
 
@@ -38,7 +38,7 @@ void simple_print_buffer(unsigned int *buffer, unsigned int size)
  */
 int main(void)
 {
-    unsigned int *a;
+    int *a;
 
     a = array_range(0, 10);
     simple_print_buffer(a, 11);
