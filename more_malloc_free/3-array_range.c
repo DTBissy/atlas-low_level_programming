@@ -7,12 +7,12 @@
  * @max: maximum
  * Return: 0
  */
-int *array_range(int min, int max)
+ unsigned int *array_range(unsigned int min,unsigned int max)
 {
-	int g = 0;
-	int i = 0;
-	int *s;
-	int size = max - min + 1;
+	unsigned int g = 0;
+	unsigned int i = 0;
+	unsigned int *s;
+	unsigned int size = max - min + 1;
 
 	if (min > max)
 	{
