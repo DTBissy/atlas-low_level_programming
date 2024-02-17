@@ -18,15 +18,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	if (size == '\0')
-	{ 
+	{
 		return (NULL);
 	}
-	
 	s = malloc(bigsize);
 	if (s == NULL)
 	{
 		return (NULL);
+		exit(0);
 	}
 
-	 return (s);
+	return (s);
 }
