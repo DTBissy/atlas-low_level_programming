@@ -1,5 +1,6 @@
 #include <stdio.h>
-/** file - Prints File name
+/**
+ * main - Prints File name
  * Return:0
  */
 #ifndef FILE
