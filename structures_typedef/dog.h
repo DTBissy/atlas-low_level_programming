@@ -1,8 +1,11 @@
-#include <stdio.h>
+#ifndef DOG_STRUCT_H
+#define DOG_STRUCT_H
 
 /**
- * struct - for dogs
- *
+ * struct dog - for dogs
+ *@name: Nae for dog
+ *@age: Age of dog
+ *@owner: Owner name
  */
 
 struct dog
@@ -12,4 +15,4 @@ struct dog
 	char *owner;
 
 };
-	
+#endif
