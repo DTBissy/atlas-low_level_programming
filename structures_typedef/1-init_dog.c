@@ -1,9 +1,7 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "dog.h"
-#include <string.h>
-#include "main.h"
-
 /**
  * init_dog - Using the variables of dog.h
  * @d: struct with dog variables
