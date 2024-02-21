@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "dog.h"
 #include <string.h>
+#include "main.h"
 
 /**
  * init_dog - Using the variables of dog.h
