@@ -14,29 +14,29 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	/** Allocates memory for the new dog */
-	dog_t *new_dog_p = malloc(sizeof(dog_t));
-	if (new_dog_p == NULL)
+	dog_t *new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
 	{
 		return NULL;
 	}
 	/** Allocates memory for the new name + 1 for '\0' */
-	new_dog_p->name = (char *)malloc(strlen(name) + 1);
-	if (new_dog_p->name == NULL)
+	new_dog->name = (char *)malloc(strlen(name) + 1);
+	if (new_dog->name == NULL)
 	{
-		free(new_dog_p); /**Frees the memory for dog */
+		free(new_dog); /**Frees the memory for dog */
 		return NULL;
 	}
-	strcpy(new_dog_p->name, name);
+	strcpy(new_dog->name, name);
 
-	new_dog_p->owner =(char *)malloc(strlen(owner) + 1);
-	if (new_dog_p->owner == NULL)
+	new_dog->owner =(char *)malloc(strlen(owner) + 1);
+	if (new_dog->owner == NULL)
 	{
-		free(new_dog_p->name); /**Frees the memory allocated for the name*/
-		free(new_dog_p);/**Free the memory for the dog pointer */
+		free(new_dog->name); /**Frees the memory allocated for the name*/
+		free(new_dog);/**Free the memory for the dog pointer */
 		return NULL;
 	}
-	strcpy(new_dog_p->owner, owner);
+	strcpy(new_dog->owner, owner);
 
-	new_dog_p->age = age;
-	return new_dog_p;
+	new_dog->age = age;
+	return new_dog;
 }
