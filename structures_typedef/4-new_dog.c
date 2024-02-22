@@ -22,11 +22,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_dog == NULL || !(name) || !(owner))
 	{
 		free(new_dog);
-		return NULL;
+		return (NULL);
 	}
 
-	for (Nname = 0; name[Nname]; Nname++);
-	for (Nowner = 0; owner[Nowner]; Nowner++);
+	for (Nname = 0; name[Nname]; Nname++)
+		;
+	for (Nowner = 0; owner[Nowner]; Nowner++)
+		;
 
 	new_dog->name = malloc(Nname + 1);
 	new_dog->owner = malloc(Nowner + 1);
