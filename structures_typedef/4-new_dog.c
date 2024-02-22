@@ -11,34 +11,41 @@
  * Return: 0
  */
 
-dog_t *new_dog(char *name, float age, char *owner) {
-    dog_t *new_dog;
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	dog_t *new_dog;
+	int i;
+	int Nname;
+	int Nowner;
 
-    /** Allocate memory for the new dog struct*/
-    new_dog = malloc(sizeof(dog_t));
-    if (new_dog == NULL) {
-        return NULL;
-    }
+	new_dog = malloc(sizeof(new_dog));
+	if (new_dog == NULL || !(name) || !(owner))
+	{
+		free(new_dog);
+		return NULL;
+	}
 
-    /** Allocate memory for the name and copy it*/
-    new_dog->name = malloc(strlen(name) +  1);
-    if (new_dog->name == NULL) {
-        free(new_dog);
-        return NULL;
-    }
-    strcpy(new_dog->name, name);
+	for (Nname = 0; name[Nname]; Nname++);
+	for (Nowner = 0; owner[Nowner]; Nowner++);
 
-    /** Set the age*/
-    new_dog->age = age;
+	new_dog->name = malloc(Nname + 1);
+	new_dog->owner = malloc(Nowner + 1);
 
-    /** Allocate memory for the owner and copy it*/
-    new_dog->owner = malloc(strlen(owner) +  1);
-    if (new_dog->owner == NULL) {
-        free(new_dog->name);
-        free(new_dog);
-        return NULL;
-    }
-    strcpy(new_dog->owner, owner);
+	if (!(new_dog->name) || !(new_dog->owner))
+	{
+		free(new_dog->name);
+		free(new_dog->owner);
+		free(new_dog);
+	}
+	new_dog->age = age;
 
-    return new_dog;
+	for (i = 0; i < Nname; i++)
+		new_dog->name[i] = name[i];
+	new_dog->name[i] = '\0';
+
+	for (i = 0; i < Nowner; i++)
+		new_dog->owner[i] = owner[i];
+	new_dog->owner[i] = '\0';
+
+	return (new_dog);
 }
