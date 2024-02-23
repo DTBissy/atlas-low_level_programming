@@ -30,5 +30,5 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 
 	printf("%d\n", opera(a, b));
-	exit(0);
+	return (0);
 }
