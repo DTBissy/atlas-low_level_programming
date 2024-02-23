@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "fucnctions_pointers.h"
 
 /**
  * print_name - Prints name with pointer to funct
@@ -10,6 +9,6 @@
 
 void print_name(char *name, void(*f)(char *))
 {
-	f(Bob);
+	f(name);
 }
 
