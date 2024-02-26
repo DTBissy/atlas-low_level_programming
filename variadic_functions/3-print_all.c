@@ -5,8 +5,8 @@
 void print_all(const char * const format, ...)
 {
 	char *s;
-	int i;
-	double f;
+	unsigned int i;
+	float f;
 	char c;
 	const char *format_copy = format;
 
