@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
-
+#include <stdlib.h>
 /**
  * print_strings - Prints strings
  * @separator: The comma with the space
@@ -20,6 +20,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (i > 0 && separator != NULL)
 		{
 			printf("%s", separator);
+		}
+		if (separator == NULL)
+		{
+			printf("(nil)");
 		}
 		printf("%s", va_arg(args, char*));
 	}
