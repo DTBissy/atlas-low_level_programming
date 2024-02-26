@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
+/**
+ * print_all - Prints anything
+ * @format: constant char ponter pointing to constant var format;
+ * Return: 0
+ */
+
 void print_all(const char * const format, ...)
 {
 	char *s;
