@@ -43,7 +43,7 @@ void print_all(const char * const format, ...)
 				}
 				if (s != NULL)
 				{
-					printf("%s, ", s);
+					printf("%s", s);
 				}
 				break;
 			default:
