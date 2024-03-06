@@ -13,7 +13,7 @@ void free_list(list_t *head)
 	{
 		if (head == NULL)
 		{
-			printf("nil");
+			printf("(nil)");
 		}
 		tmp = head;
 		head = head->next;
