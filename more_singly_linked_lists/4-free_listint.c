@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * _listint - Frees the function
+ * free_listint - Frees the function
  * @head: First node
  * Return: 0
  */
@@ -9,7 +9,7 @@ void free_listint(listint_t *head)
 {
 	listint_t *tmp;
 
-	while(head != NULL)
+	while (head != NULL)
 	{
 		tmp = head;
 		head = head->next;
