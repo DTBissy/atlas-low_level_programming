@@ -2,7 +2,7 @@
 
 /**
  * print_listint - Prints all elements struct
- * @h: First node
+ * @h: The First node
  * Return: 0
  */
 size_t print_listint(const listint_t *h)
