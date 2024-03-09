@@ -2,7 +2,7 @@
 
 /**
  * clear_bit - Sets the value of a bit 0
- * @n: The number to set 
+ * @n: The number to set
  * @index: The bit were changing
  * Return: 0
  */
