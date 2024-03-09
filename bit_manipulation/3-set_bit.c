@@ -4,7 +4,7 @@
  * set_bit - sets a bit at the index
  * @n: The number being set
  * @index: Where its being set
- * Return: 0 
+ * Return: 0
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
@@ -14,7 +14,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 	{
 		return (-1);
 	}
-	
 	mask = 1UL << index;
 	*n |= mask;
 
