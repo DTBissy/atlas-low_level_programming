@@ -18,8 +18,5 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	mask = (1UL << index);
 	bit = ((n & mask) ? 1 : 0);
-	return bit;
+	return (bit);
 }
-
-
-
