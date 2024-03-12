@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * read_textfile - reads a text file and prints 
- * @requiescat: A file
+ * read_textfile - reads a text file and prints
+ * @filename: A file
  * @letters: the letters to be counted
  * Return: 0
  */
