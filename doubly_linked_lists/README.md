@@ -1,0 +1,1 @@
+This project can be considered an extension of singly linked lists. I will be adding a new pointer to the *head called *previous which will hold "NULL" so that we can traverse the list forwrds and backwards. 
