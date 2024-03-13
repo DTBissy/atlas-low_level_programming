@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-* print_dlistint - Prints all elements of struct
+* dlistint_len - Prints all elements of struct
 * @h: head node
 * Return: 0
 */
