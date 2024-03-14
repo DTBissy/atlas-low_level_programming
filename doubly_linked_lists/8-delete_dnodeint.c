@@ -29,18 +29,21 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
 
 		for (i = 0; current != NULL && i < idx; i++)
 		{
+            deletenode  = current;
 			current = current->next;
 		}
 		if (current == NULL || current->next == NULL)
 		{
 			return (-1);
 		}
-		deletenode = current->next;
-		current->next = deletenode->next;
-		if (deletenode->next != NULL)
+		if (deletenode != NULL)
+        {
+            deletenode->next = current->next;
+        }
+		if (current->next != NULL)
 		{
-			deletenode->next->prev = current;
+			current->next->prev = deletenode;
 		}
 		free(deletenode);
-		return (0);
+		return (-1);
 }
