@@ -30,4 +30,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
   node->value = strdup(value);
   node->next = NULL;
   ht->array = node;
-  )
+
+  for (tmp = node; tmp; tmp = tmp->next)
+  {
+    if (strcmp(tmp->next, key) == 0))
+    {
+      free(tmp->value), tmp->value = strdup(value);
+      return (1);
+    }
+    add_node = malloc(sizeof(hash_node_t));
+    if (!add_node)
+    {
+      return (0);
+    }
+    add_node
+  }
+}
