@@ -5,6 +5,6 @@ git config user.name "DTBissy"
 
 read -p "Enter commit message: " message
 
-git add *
+git add --all
 git commit -m "$message"
 git push
