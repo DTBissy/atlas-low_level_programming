@@ -1,14 +1,15 @@
 #include "hash_tables.h"
 /**
- * hash_table_set - adds an element to the hash table
- * @ht: is the hash table to add or update
- * @key: The key(name)
- * @value: Data associated with key, value must be duplicated
- * Return: 0
+* hash_table_set - adds an element to the hash table
+* @ht: is the hash table to add or update
+* @key: The key(name)
+* @value: Data associated with key, value must be duplicated
+* Return: 0
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index = 0;
+
 	hash_node_t *node = NULL, *add_node = NULL, *tmp = NULL;
 
 	if (!key || !ht || !ht->array)
@@ -43,8 +44,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!add_node)
 		return (0);
 	add_node->key = strdup(key);
+add_node->value = strdup(value);
 	add_node->next = node;
 	ht->array[index] = add_node;
-
 	return (1);
 }
