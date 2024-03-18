@@ -26,17 +26,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node->value = strdup(value);
 	node->next = NULL;
 	ht->array[index] = node;
-	return (1);
+	return (true);
 	}
 	for (tmp = node; tmp; tmp = tmp->next)
 		if (strcmp(tmp->key, key) == 0)
 		{
 			free(tmp->value), tmp->value = strdup(value);
-			return (1);
+			return (true);
 		}
 	add_node = malloc(sizeof(hash_node_t));
 	if (!add_node)
-		return (0);
+		return (false);
 	add_node->key = strdup(key);
 add_node->value = strdup(value);
 	add_node->next = node;
