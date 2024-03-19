@@ -1,0 +1,206 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct song
+{
+	char *title;
+	char *album;
+	char *mood;
+	int year;
+	struct song *next;
+} song;
+
+typedef struct list
+{
+	song *song;
+	struct list *prev;
+	struct list *next;
+} list;
+
+
+song *add_song(song **head, char *new_title, char *new_album, char *new_mood, int new_year)
+{
+	song *new_song = NULL;
+	
+	new_song = malloc(sizeof(song));
+	if (new_song == NULL)
+		return (NULL);
+
+	new_song->title = strdup(new_title);
+	new_song->album = strdup(new_album);
+	new_song->mood = strdup(new_mood);
+	new_song->year = new_year;
+
+	new_song->next = *head;
+
+	*head = new_song;
+
+	return (*head);
+}
+
+song *find_song(song *head, char *title)
+{
+	while (head->next)
+	{
+		if (strcmp(title, head->title) == 0)
+			return (head);
+		head = head->next;
+	}
+
+	return (NULL);
+}
+
+list *add_song_to_list_end(list **head, song *new_song)
+{
+	list *new_song_in_list = NULL;
+	list *temp_list;
+
+	new_song_in_list = malloc(sizeof(list));
+	if (new_song_in_list == NULL)
+		return (NULL);
+
+	new_song_in_list->song = new_song;
+	new_song_in_list->next = new_song_in_list->prev = NULL;
+
+	if (*head == NULL)
+		*head = new_song_in_list;
+	else
+	{
+		temp_list = *head;
+		while (temp_list->next)
+			temp_list = temp_list->next;
+
+		new_song_in_list->prev = temp_list;
+		temp_list->next = new_song_in_list;
+	}
+	return (new_song_in_list);
+}
+
+list *add_song_to_list(list **head, song *new_song)
+{
+	list *new_song_in_list = NULL;
+
+	new_song_in_list = malloc(sizeof(list));
+	if (new_song_in_list == NULL)
+		return (NULL);
+
+	new_song_in_list->song = new_song;
+	new_song_in_list->next = *head;
+
+	if (*head)
+		(*head)->prev = new_song_in_list;
+	else
+		new_song_in_list->prev = NULL;
+
+	*head = new_song_in_list;
+	
+	return(*head);
+
+}
+
+void print_songs(song *head)
+{
+	while (head)
+	{
+		if (head->title)
+			printf("[%s by %s (%d)]\n", head->title, head->album, head->year);
+		head = head->next;
+	}
+}
+
+void print_list(list *head)
+{
+	int i = 1;
+	
+	if (head->prev)
+	{
+		while(head->prev)
+			head = head->prev;
+	}
+
+	while (head)
+	{
+		if (head->song)
+			printf("%d. %s by %s (%d)\n", i++, head->song->title, head->song->album, head->song->year);
+		head = head->next;
+	}
+}
+
+list *make_playlist_by_mood(song *songhead, list *listhead, char *mood)
+{
+
+}
+
+int main(void)
+{
+	song *songhead;
+	list *listhead;
+	char command;
+
+	add_song(&songhead, "We Like To Party", "Vengaboys", "Happy", 1999);
+	add_song(&songhead, "Porcelain", "Moby", "Chill", 1999);
+	add_song(&songhead, "Pantsfeet", "DJ Cummerbund", "Upset", 2023);
+	add_song(&songhead, "Push It!", "Salt n Pepa", "Happy", 1986);
+	add_song(&songhead, "Strike", "Lil Yachty", "Chill", 2023);
+	add_song(&songhead, "Git Commit Like You Mean It", "C Masterminds", "Upset", 2024);
+	add_song(&songhead, "Heart on Ice", "Rod Wave", "Upset", 2020);
+	add_song(&songhead, "Ohh Betty (Linter Me Harder)", "Trailing Whitespaces", "Chill", 2024);
+	
+
+	printf("Songs:\n");
+	print_songs(songhead);
+
+/*	add_song_to_list_end(&listhead, find_song(songhead, "Porcelain"));
+	add_song_to_list_end(&listhead, find_song(songhead, "We Like To Party"));
+	add_song_to_list_end(&listhead, find_song(songhead, "Porcelain"));
+	add_song_to_list_end(&listhead, find_song(songhead, "Push It!"));
+	add_song_to_list_end(&listhead, find_song(songhead, "Porcelain"));
+*/
+
+	make_playlist_by_mood(&songhead, &listhead, "Chill");
+
+
+	printf("\nPlaylist:\n");
+	print_list(listhead);
+
+while (1)
+{
+	if (command != '\n')
+		printf("\nPress [S]kip [P]ause [R]ewind [L]ist songs Show pl[A]ylist or [Q]uit\n");
+	scanf("%c", &command);
+
+	if (command == 'L' || command == 'l')
+		print_songs(songhead);
+
+	if (command == 'A' || command == 'a')
+		print_list(listhead);
+
+	if (command == 'S' || command == 's')
+	{
+		if (listhead->next)
+		{
+			listhead = listhead->next;
+			printf("Next song is %s by %s (%d)\n", listhead->song->title, listhead->song->album, listhead->song->year);
+		}
+		else
+			printf("You're at the end of the playlist. Add more songs or something?\n");
+	}
+	if (command == 'R' || command == 'r')
+	{
+		if (listhead->prev)
+		{
+			listhead = listhead->prev;
+			printf("Rewinding back to song %s by %s (%d)\n", listhead->song->title, listhead->song->album, listhead->song->year);
+		}
+		else
+			printf("You're at the beginning of the playlist. Good luck with that rewind..\n");
+	}
+	if (command == 'P' || command == 'p')
+		printf("Pausing. Now what?\n");
+	
+	if (command == 'Q' || command == 'q')
+		break;
+}
+	return (0);
+}
