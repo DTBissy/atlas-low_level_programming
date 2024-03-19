@@ -40,4 +40,5 @@ for (; i < ht->size; i++)
 	}
 	}
 }
+printf("}\n")
 }
