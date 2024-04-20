@@ -7,9 +7,8 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-int fd;
-
-ssize_t bw;
+int fd, len = 0;
+int bw;
 
 if (filename == NULL)
 {
@@ -18,20 +17,14 @@ if (filename == NULL)
 fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 if (fd < 0)
 {
-perror("Error creating or opening file");
 return (-1);
 }
+while (text_content && *(text_content + len))
+len++;
 
-if (text_content != NULL)
-{
-bw = write(fd, text_content, strlen(text_content));
-if (bw < 0)
-{
-	perror("Error writing to file");
-	close(fd);
-	return (-1);
-}
-}
+bw = write(fd, text_content, len);
 close(fd);
+if (bw < 0)
 return (-1);
+return (1);
 }
