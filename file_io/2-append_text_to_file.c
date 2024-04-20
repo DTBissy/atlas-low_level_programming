@@ -13,13 +13,13 @@ if (filename == NULL)
 {
 return (-1);
 }
-fd = open(filename, O_RDWR | O_TRUNC | O_APPEND);
+fd = open(filename, O_RDWR | O_APPEND);
 if (fd < 0)
 return (-1);
 if (text_content == NULL)
 {
 close(fd);
-return (-1);
+return (1);
 }
 
 while (*(text_content + len))
