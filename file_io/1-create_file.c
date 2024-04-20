@@ -22,14 +22,7 @@ perror("Error creating or opening file");
 return (-1);
 }
 
-if (chmod(filename, S_IRUSR | S_IWUSR) < 0)
-{
-perror("Error setting file permissions");
-close(fd);
-return (-1);
-}
-
-if (text_content == NULL)
+if (text_content != NULL)
 {
 bw = write(fd, text_content, strlen(text_content));
 if (bw < 0)
